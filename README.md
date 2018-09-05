@@ -8,7 +8,7 @@ I decided to use Spring JPA to create my database relationships in Java.  This w
 
 I created two main classes - `Driver` and `Trip`.  The `Trip` entity has instance variables for an ID number, duration of the trip, and trip distance.  It also has a Many-To-One relationship with `Driver`.
 
-The `Driver` class has instance variables for an ID number and the Driver Name, and a One-To-Many relationship with the `Trip` entity.  In addition the `Driver` entity has getters that calculate the accumulated distance, accumulated duration, and average speed based on the associated trips.  It also has an overridden `toString` method which generates the each driver's line for the report including rounding the distance and speed.
+The `Driver` class has instance variables for an ID number and the Driver Name, and a One-To-Many relationship with the `Trip` entity.  In addition the `Driver` entity has getters that calculate the accumulated distance, accumulated duration, and average speed based on the associated trips.  It also has an overridden `toString` method which generates each driver's line for the final report including rounding the distance and speed.
 
 Both classes have associated respositories that are interfaces which extend the CRUD Repository.  The `DriverRepository` has a custom sort which orders the collection of drivers based on their trips' accumulated distances.
 
